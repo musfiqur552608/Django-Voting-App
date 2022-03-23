@@ -26,11 +26,19 @@
                   <li class="nav-item">
                      <a href="#instructions" class="nav-link">Instructions</a>
                   </li>
+                  <li class="nav-item">
+                     <a href="#result" class="nav-link">Result</a>
+                  </li>
                </ul>
             </div>
          </div>
       </nav>
-      <div class="container-fluid" style="margin-bottom: 20rem;">
+      <div class="container-fluid" style="margin-bottom: 20rem; margin-top: 5rem;">
+         {{globalcnt}}
+         {% for key,value in globalcnt.items %}
+         {{key}} - {{value}}
+         <br>
+         {% endfor %}
          <div class="row">
             <div class="col-md-6" style="margin: 1rem auto 0 auto;">
                <img src="{% static 'logo.jpg' %}" alt="" class="img-fluid" style="width: 100%; ">
@@ -54,6 +62,52 @@
                         
                      </form>
                   </div>
+               </div>
+            </div>
+         </div>
+         <div class="row" style="margin-top: 1rem;">
+            <div class="col-md-6" style="margin: 1rem auto 0 auto;">
+               <p class="badge bg-warning" id="result" name="result" style="text-align: center; display: block; font-size: 2rem;">
+                  Result
+               </p>
+               <hr>
+               <p class="lead" style="text-align: center; font-size: 2rem;">
+                  Result Table
+               </p>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <div class="table-responsive">
+                  <table class="table">
+                     <thead>
+                        <tr>
+                           <th scope="col">#</th>
+                           <th scope="col">First</th>
+                           <th scope="col">Last</th>
+                           <th scope="col">Handle</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <th scope="row">1</th>
+                           <td>Mark</td>
+                           <td>Otto</td>
+                           <td>@mdo</td>
+                        </tr>
+                        <tr>
+                           <th scope="row">2</th>
+                           <td>Jacob</td>
+                           <td>Thornton</td>
+                           <td>@fat</td>
+                        </tr>
+                        <tr>
+                           <th scope="row">3</th>
+                           <td colspan="2">Larry the Bird</td>
+                           <td>@twitter</td>
+                        </tr>
+                     </tbody>
+                  </table>
                </div>
             </div>
          </div>
