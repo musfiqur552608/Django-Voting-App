@@ -26,3 +26,13 @@ def getquery(request):
       "globalcnt" : globalcnt
    }
    return render(request, 'index.html', context=dict)
+
+
+def sortdata(request):
+   global globalcnt
+   globalcnt = dict(sorted(globalcnt.items(),key=lambda x:x[1],reverse=True))
+   dicts = {
+      "lang" : lang,
+      "globalcnt" : globalcnt
+   }
+   return render(request, 'index.html', context=dicts)

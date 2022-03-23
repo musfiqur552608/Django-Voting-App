@@ -33,12 +33,7 @@
             </div>
          </div>
       </nav>
-      <div class="container-fluid" style="margin-bottom: 20rem; margin-top: 5rem;">
-         {{globalcnt}}
-         {% for key,value in globalcnt.items %}
-         {{key}} - {{value}}
-         <br>
-         {% endfor %}
+      <div class="container-fluid" style="margin-bottom: 20rem; margin-top: 2rem;">
          <div class="row">
             <div class="col-md-6" style="margin: 1rem auto 0 auto;">
                <img src="{% static 'logo.jpg' %}" alt="" class="img-fluid" style="width: 100%; ">
@@ -73,6 +68,7 @@
                <hr>
                <p class="lead" style="text-align: center; font-size: 2rem;">
                   Result Table
+                  <a href="{% url 'sortdata' %}" class="btn btn-primary">Sort Data</a>
                </p>
             </div>
          </div>
